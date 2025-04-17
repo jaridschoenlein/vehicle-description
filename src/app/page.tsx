@@ -28,7 +28,7 @@ export default function VehicleForm() {
 
       const data: { description: string } = await res.json();
       setDescription(data.description);
-    } catch (err: any) {
+    } catch (err: unknown | any) {
       setError(err.message || 'Something went wrong.');
     } finally {
       setLoading(false);
